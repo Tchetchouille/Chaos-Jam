@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgos08i0stsew"
-path="res://.godot/imported/vide.png-466890dca31c4b58b96c6019372923d0.ctex"
+uid="uid://cvw5jdt6452nr"
+path="res://.godot/imported/assasin_100px.png-9c4b8b76f4970697813d83f960fd5747.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/vide.png"
-dest_files=["res://.godot/imported/vide.png-466890dca31c4b58b96c6019372923d0.ctex"]
+source_file="res://sprite/assasin_100px.png"
+dest_files=["res://.godot/imported/assasin_100px.png-9c4b8b76f4970697813d83f960fd5747.ctex"]
 
 [params]
 
