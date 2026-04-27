@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://q202rr2v34pt"]
+
+[ext_resource type="Texture2D" uid="uid://cu70m3xd50uex" path="res://sprite/personnage/crocodile_100px.png" id="1_hdr1y"]
+[ext_resource type="Script" uid="uid://n5cuat28tm3x" path="res://scenes(mei)/scripts/croco.gd" id="1_o0ery"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulq6j"]
+atlas = ExtResource("1_hdr1y")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o0ery"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulq6j")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1kye7"]
+size = Vector2(55, 40)
+
+[node name="Player" type="Node2D" unique_id=1185415252]
+
+[node name="croco" type="CharacterBody2D" parent="." unique_id=2069976401]
+script = ExtResource("1_o0ery")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="croco" unique_id=1913893043]
+position = Vector2(-3, -19)
+sprite_frames = SubResource("SpriteFrames_o0ery")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="croco" unique_id=25085843]
+position = Vector2(-2.5, 7)
+shape = SubResource("RectangleShape2D_1kye7")
+
+[node name="Camera2D" type="Camera2D" parent="croco" unique_id=950670894]
+zoom = Vector2(2, 2)
