@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://o4ayyta7lub0" path="res://Some Scenes (not edible)/Some scripts that are not scenes/bg.gd" id="2_8khev"]
 [ext_resource type="Theme" uid="uid://diqgmb3vgg5cu" path="res://Themes/something_something_title_theme.tres" id="3_48vh7"]
 [ext_resource type="PackedScene" uid="uid://djfagdh8yfj65" path="res://game_manager.tscn" id="4_mhgmo"]
+[ext_resource type="PackedScene" uid="uid://dg28uthqtdmhb" path="res://capuccino.tscn" id="5_wq1rd"]
 
 [node name="EnterChaos" type="Control" unique_id=673464465]
 layout_mode = 3
@@ -51,5 +52,8 @@ theme = ExtResource("3_48vh7")
 text = "Le jeu se nomme : <random>"
 
 [node name="GameManager" parent="." unique_id=870113844 instance=ExtResource("4_mhgmo")]
+
+[node name="Capuccino" parent="." unique_id=1427683859 instance=ExtResource("5_wq1rd")]
+position = Vector2(181, 192)
 
 [connection signal="timeout" from="Bg/Timer" to="Bg" method="_on_timer_timeout"]
