@@ -27,6 +27,7 @@ size = Vector2(55, 40)
 script = ExtResource("1_o0ery")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="croco" unique_id=1913893043]
+texture_filter = 1
 position = Vector2(-3, -19)
 sprite_frames = SubResource("SpriteFrames_o0ery")
 animation = &"idle"
