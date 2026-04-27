@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bthdoug2dhfdm"
-path="res://.godot/imported/tileset_vert.png-60ec9fa3ce142c1b494a65943999a35e.ctex"
+uid="uid://6xsob0uo04ey"
+path="res://.godot/imported/fond2.png-22772e2b05109c01e01e67c9c402e3c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/tileset/tileset_vert.png"
-dest_files=["res://.godot/imported/tileset_vert.png-60ec9fa3ce142c1b494a65943999a35e.ctex"]
+source_file="res://assets/fond/nuit_prairie/fond2.png"
+dest_files=["res://.godot/imported/fond2.png-22772e2b05109c01e01e67c9c402e3c6.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drubb1q1nnyqn"
-path="res://.godot/imported/hearts.png-cccf9060cf0f87ff6770dd8c2fbfad2a.ctex"
+uid="uid://b2ik1hpkx2g17"
+path="res://.godot/imported/flower.png-67f8bf0be51c8dbc22bb1e0c03510b8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/personnage/hearts.png"
-dest_files=["res://.godot/imported/hearts.png-cccf9060cf0f87ff6770dd8c2fbfad2a.ctex"]
+source_file="res://assets/personnage/flower.png"
+dest_files=["res://.godot/imported/flower.png-67f8bf0be51c8dbc22bb1e0c03510b8b.ctex"]
 
 [params]
 

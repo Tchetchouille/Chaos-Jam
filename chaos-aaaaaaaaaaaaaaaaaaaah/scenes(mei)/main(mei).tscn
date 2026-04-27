@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cfe76bbmb1u8g"]
 
-[ext_resource type="Texture2D" uid="uid://cu70m3xd50uex" path="res://sprite/personnage/crocodile_100px.png" id="1_34rv4"]
+[ext_resource type="Texture2D" uid="uid://cu70m3xd50uex" path="res://assets/personnage/crocodile_100px.png" id="1_34rv4"]
 [ext_resource type="Script" uid="uid://n5cuat28tm3x" path="res://scenes(mei)/scripts/croco.gd" id="2_ulq6j"]
-[ext_resource type="Texture2D" uid="uid://bthdoug2dhfdm" path="res://sprite/tileset/tileset_vert.png" id="2_wcmg0"]
+[ext_resource type="Texture2D" uid="uid://bthdoug2dhfdm" path="res://assets/tileset/tileset_vert.png" id="2_wcmg0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kjevp"]
 texture = ExtResource("2_wcmg0")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blluhqfcyok2g"
-path="res://.godot/imported/assasin_100px.png-16a9798be12128b0d9b30b55360222f8.ctex"
+uid="uid://xdwp61vu5u01"
+path="res://.godot/imported/fond_jour_2.png-d9f0247e97bc8daac1a8a6723a078f72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/personnage/assasin_100px.png"
-dest_files=["res://.godot/imported/assasin_100px.png-16a9798be12128b0d9b30b55360222f8.ctex"]
+source_file="res://assets/fond/jour_prairie/fond_jour_2.png"
+dest_files=["res://.godot/imported/fond_jour_2.png-d9f0247e97bc8daac1a8a6723a078f72.ctex"]
 
 [params]
 

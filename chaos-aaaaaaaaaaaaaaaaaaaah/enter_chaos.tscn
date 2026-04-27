@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cfqabk6nelnii"]
 
-[ext_resource type="Texture2D" uid="uid://daald1qi1ycx1" path="res://sprite/fond/nuit_prairie/fond1.png" id="1_xtl06"]
+[ext_resource type="Texture2D" uid="uid://daald1qi1ycx1" path="res://assets/fond/nuit_prairie/fond1.png" id="1_xtl06"]
 [ext_resource type="Script" uid="uid://o4ayyta7lub0" path="res://Some Scenes (not edible)/Some scripts that are not scenes/bg.gd" id="2_8khev"]
 [ext_resource type="Theme" uid="uid://diqgmb3vgg5cu" path="res://Themes/something_something_title_theme.tres" id="3_48vh7"]
 [ext_resource type="PackedScene" uid="uid://djfagdh8yfj65" path="res://game_manager.tscn" id="4_mhgmo"]
-[ext_resource type="PackedScene" uid="uid://dg28uthqtdmhb" path="res://capuccino.tscn" id="5_wq1rd"]
+[ext_resource type="PackedScene" path="res://capuccino.tscn" id="5_wq1rd"]
 
 [node name="EnterChaos" type="Control" unique_id=673464465]
 layout_mode = 3

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6xsob0uo04ey"
-path="res://.godot/imported/fond2.png-a82912b3b938e292df41f23de1b70205.ctex"
+uid="uid://cu70m3xd50uex"
+path="res://.godot/imported/crocodile_100px.png-8817ef90ec92cd75c39944ce40126dd0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/fond/nuit_prairie/fond2.png"
-dest_files=["res://.godot/imported/fond2.png-a82912b3b938e292df41f23de1b70205.ctex"]
+source_file="res://assets/personnage/crocodile_100px.png"
+dest_files=["res://.godot/imported/crocodile_100px.png-8817ef90ec92cd75c39944ce40126dd0.ctex"]
 
 [params]
 

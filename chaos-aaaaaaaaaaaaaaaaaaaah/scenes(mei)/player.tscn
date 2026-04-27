@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://q202rr2v34pt"]
 
-[ext_resource type="Texture2D" uid="uid://cu70m3xd50uex" path="res://sprite/personnage/crocodile_100px.png" id="1_hdr1y"]
+[ext_resource type="Texture2D" uid="uid://cu70m3xd50uex" path="res://assets/personnage/crocodile_100px.png" id="1_hdr1y"]
 [ext_resource type="Script" uid="uid://n5cuat28tm3x" path="res://scenes(mei)/scripts/croco.gd" id="1_o0ery"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ulq6j"]
