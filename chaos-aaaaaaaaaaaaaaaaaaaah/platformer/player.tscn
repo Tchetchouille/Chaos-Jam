@@ -1,21 +1,35 @@
 [gd_scene format=3 uid="uid://q202rr2v34pt"]
 
-[ext_resource type="Texture2D" uid="uid://cu70m3xd50uex" path="res://assets/personnage/crocodile_100px.png" id="1_hdr1y"]
 [ext_resource type="Script" uid="uid://n5cuat28tm3x" path="res://platformer/scripts/croco.gd" id="1_o0ery"]
+[ext_resource type="Texture2D" uid="uid://vk1pj8oydxay" path="res://assets/personnage/croco_idle.png" id="2_dsss6"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ulq6j"]
-atlas = ExtResource("1_hdr1y")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ni0jc"]
+atlas = ExtResource("2_dsss6")
 region = Rect2(0, 0, 100, 100)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_o0ery"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_onxs0"]
+atlas = ExtResource("2_dsss6")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hary"]
+atlas = ExtResource("2_dsss6")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mqt2r"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ulq6j")
+"texture": SubResource("AtlasTexture_ni0jc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onxs0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hary")
 }],
 "loop": true,
-"name": &"idle",
-"speed": 5.0
+"name": &"default",
+"speed": 3.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kye7"]
@@ -29,8 +43,8 @@ script = ExtResource("1_o0ery")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="croco" unique_id=1913893043]
 texture_filter = 1
 position = Vector2(-3, -19)
-sprite_frames = SubResource("SpriteFrames_o0ery")
-animation = &"idle"
+sprite_frames = SubResource("SpriteFrames_mqt2r")
+frame_progress = 0.0053694863
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="croco" unique_id=25085843]
 position = Vector2(-2.5, 7)

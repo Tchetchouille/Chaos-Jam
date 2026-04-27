@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cfe76bbmb1u8g"]
 
-[ext_resource type="Texture2D" uid="uid://cu70m3xd50uex" path="res://assets/personnage/crocodile_100px.png" id="1_34rv4"]
 [ext_resource type="Script" uid="uid://n5cuat28tm3x" path="res://platformer/scripts/croco.gd" id="2_ulq6j"]
 [ext_resource type="Texture2D" uid="uid://bthdoug2dhfdm" path="res://assets/tileset/tileset_vert.png" id="2_wcmg0"]
+[ext_resource type="Texture2D" uid="uid://vk1pj8oydxay" path="res://assets/personnage/croco_idle.png" id="3_66dbu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kjevp"]
 texture = ExtResource("2_wcmg0")
@@ -60,19 +60,33 @@ texture_region_size = Vector2i(100, 100)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_kjevp")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ulq6j"]
-atlas = ExtResource("1_34rv4")
+[sub_resource type="AtlasTexture" id="AtlasTexture_2m11t"]
+atlas = ExtResource("3_66dbu")
 region = Rect2(0, 0, 100, 100)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_5d8qw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2jl4"]
+atlas = ExtResource("3_66dbu")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhnhw"]
+atlas = ExtResource("3_66dbu")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c5qwv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ulq6j")
+"texture": SubResource("AtlasTexture_2m11t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2jl4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mhnhw")
 }],
 "loop": true,
-"name": &"idle",
-"speed": 5.0
+"name": &"default",
+"speed": 3.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g35s0"]
@@ -96,9 +110,10 @@ position = Vector2(3, -15)
 script = ExtResource("2_ulq6j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="croco" unique_id=144554218]
+texture_filter = 1
 position = Vector2(-3, -19)
-sprite_frames = SubResource("SpriteFrames_5d8qw")
-animation = &"idle"
+sprite_frames = SubResource("SpriteFrames_c5qwv")
+frame_progress = 0.8981262
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="croco" unique_id=268012493]
 position = Vector2(-2.5, 7)
