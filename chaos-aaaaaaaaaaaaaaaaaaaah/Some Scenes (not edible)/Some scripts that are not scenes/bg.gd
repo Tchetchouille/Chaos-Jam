@@ -1,8 +1,8 @@
 extends TextureRect
 
 var textures = [
-	preload("res://sprite/fond/nuit_prairie/fond1.png"),
-	preload("res://sprite/fond/nuit_prairie/fond2.png")
+	preload("res://assets/fond/jour_prairie/fond_jour_1.png"),
+	preload("res://assets/fond/jour_prairie/fond_jour_2.png")
 ]
 var flip = false;
 

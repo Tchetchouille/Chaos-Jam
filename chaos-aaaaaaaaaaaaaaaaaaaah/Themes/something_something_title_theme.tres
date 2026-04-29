@@ -1,5 +1,5 @@
 [gd_resource type="Theme" format=3 uid="uid://diqgmb3vgg5cu"]
 
 [resource]
-Label/constants/outline_size = 20
-RichTextLabel/constants/outline_size = 20
+Label/constants/outline_size = 10
+RichTextLabel/constants/outline_size = 10

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="CHAOS-AAAAAAAAAAAAAAAAAAAAH"
-run/main_scene="uid://q202rr2v34pt"
+run/main_scene="uid://cfqabk6nelnii"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
