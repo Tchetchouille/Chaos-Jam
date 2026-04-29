@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c7sf76f0xaiwo"]
+
+[ext_resource type="AudioStream" uid="uid://6p0yivkdgsim" path="res://Audio/Music/Move Forward.mp3" id="1_25ddj"]
+
+[node name="GlobalMusic" type="AudioStreamPlayer" unique_id=1229781750]
+stream = ExtResource("1_25ddj")
+volume_db = 2.0
+autoplay = true

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cfqabk6nelnii"]
 
-[ext_resource type="Texture2D" uid="uid://daald1qi1ycx1" path="res://assets/fond/nuit_prairie/fond1.png" id="1_xtl06"]
+[ext_resource type="Texture2D" uid="uid://cbl6yynqv86ec" path="res://assets/fond/jour_prairie/fond_jour_1.png" id="1_wq1rd"]
 [ext_resource type="Script" uid="uid://o4ayyta7lub0" path="res://Some Scenes (not edible)/Some scripts that are not scenes/bg.gd" id="2_8khev"]
 [ext_resource type="Theme" uid="uid://diqgmb3vgg5cu" path="res://Themes/something_something_title_theme.tres" id="3_48vh7"]
 [ext_resource type="PackedScene" path="res://game_manager.tscn" id="4_mhgmo"]
@@ -19,13 +19,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -64.0
-offset_top = -36.0
-offset_right = 64.0
-offset_bottom = 36.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_xtl06")
+texture = ExtResource("1_wq1rd")
+expand_mode = 1
 script = ExtResource("2_8khev")
 
 [node name="Timer" type="Timer" parent="Bg" unique_id=1695430717]
@@ -54,6 +51,6 @@ text = "Le jeu se nomme : <random>"
 [node name="GameManager" parent="." unique_id=870113844 instance=ExtResource("4_mhgmo")]
 
 [node name="Capuccino" parent="." unique_id=1427683859 instance=ExtResource("5_wq1rd")]
-position = Vector2(181, 192)
+position = Vector2(766, 533)
 
 [connection signal="timeout" from="Bg/Timer" to="Bg" method="_on_timer_timeout"]
