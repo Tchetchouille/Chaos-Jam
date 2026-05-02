@@ -6,7 +6,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("die") and can_kill:
 		body.die()
 	# Brute force check de si le body c'est le player
-	if body.has_method("change_mask"):
+	if body.has_method("is_player"):
 		get_the_player_killed()
 
 func get_the_player_killed ():

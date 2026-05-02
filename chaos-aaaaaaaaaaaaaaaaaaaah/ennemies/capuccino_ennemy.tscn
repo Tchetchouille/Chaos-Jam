@@ -85,8 +85,8 @@ animations = [{
 "speed": 7.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tsr6f"]
-size = Vector2(30, 35)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xchan"]
+height = 39.0
 
 [node name="Capuccino" type="CharacterBody2D" unique_id=1427683859]
 script = ExtResource("1_afp6r")
@@ -106,13 +106,33 @@ frame_progress = 0.713899
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1584240295]
 position = Vector2(1, 6.5)
-shape = SubResource("RectangleShape2D_tsr6f")
+shape = SubResource("CapsuleShape2D_xchan")
 
 [node name="Timer" type="Timer" parent="." unique_id=127846568]
 wait_time = 1.4
 
 [node name="Timer2" type="Timer" parent="." unique_id=968896712]
 wait_time = 0.2
+
+[node name="Label" type="Label" parent="." unique_id=1762789264]
+visible = false
+offset_left = -45.0
+offset_top = -50.0
+offset_right = 46.0
+offset_bottom = -21.0
+theme_override_font_sizes/font_size = 7
+text = "Macron !! Explosion !!! Pouf Pif Paf"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Node2D" type="Node2D" parent="." unique_id=102593305]
+position = Vector2(0, 10)
+
+[node name="LeftRay" type="RayCast2D" parent="Node2D" unique_id=1371534294]
+target_position = Vector2(300, 0)
+
+[node name="RightRay" type="RayCast2D" parent="Node2D" unique_id=881837275]
+target_position = Vector2(-300, 0)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

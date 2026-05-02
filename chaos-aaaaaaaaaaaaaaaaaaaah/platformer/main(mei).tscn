@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://cfe76bbmb1u8g"]
 
 [ext_resource type="PackedScene" uid="uid://q202rr2v34pt" path="res://platformer/player.tscn" id="1_2m11t"]
-[ext_resource type="Script" uid="uid://byanmuwpo5u8f" path="res://platformer/scripts/game_manager.gd" id="1_g2jl4"]
+[ext_resource type="Script" path="res://platformer/scripts/game_manager.gd" id="1_g2jl4"]
 [ext_resource type="Texture2D" uid="uid://bthdoug2dhfdm" path="res://assets/tileset/tileset_vert.png" id="2_wcmg0"]
-[ext_resource type="PackedScene" uid="uid://c2d5phnpa07we" path="res://platformer/flower.tscn" id="3_66dbu"]
+[ext_resource type="PackedScene" path="res://platformer/flower.tscn" id="3_66dbu"]
+[ext_resource type="PackedScene" uid="uid://7ksnaclv1ne6" path="res://ennemies/capuccino_ennemy.tscn" id="5_g2jl4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kjevp"]
 texture = ExtResource("2_wcmg0")
@@ -93,3 +94,6 @@ position = Vector2(229, -15)
 
 [node name="flower" parent="flowers" unique_id=1765435353 instance=ExtResource("3_66dbu")]
 position = Vector2(143, -14)
+
+[node name="Capuccino" parent="." unique_id=1427683859 instance=ExtResource("5_g2jl4")]
+position = Vector2(371, -15)
