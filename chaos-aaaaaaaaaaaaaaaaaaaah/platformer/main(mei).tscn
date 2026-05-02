@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://cfe76bbmb1u8g"]
 
 [ext_resource type="PackedScene" uid="uid://q202rr2v34pt" path="res://platformer/player.tscn" id="1_2m11t"]
+[ext_resource type="Script" uid="uid://byanmuwpo5u8f" path="res://platformer/scripts/game_manager.gd" id="1_g2jl4"]
 [ext_resource type="Texture2D" uid="uid://bthdoug2dhfdm" path="res://assets/tileset/tileset_vert.png" id="2_wcmg0"]
+[ext_resource type="PackedScene" uid="uid://c2d5phnpa07we" path="res://platformer/flower.tscn" id="3_66dbu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kjevp"]
 texture = ExtResource("2_wcmg0")
@@ -61,6 +63,10 @@ sources/0 = SubResource("TileSetAtlasSource_kjevp")
 
 [node name="game" type="Node2D" unique_id=688200943]
 
+[node name="game_manager" type="Node2D" parent="." unique_id=339136379]
+unique_name_in_owner = true
+script = ExtResource("1_g2jl4")
+
 [node name="TileMap" type="TileMap" parent="." unique_id=1621352096]
 texture_filter = 1
 tile_set = SubResource("TileSet_j5inn")
@@ -73,3 +79,17 @@ layer_0/tile_data = PackedInt32Array(262136, 0, 0, 262142, 65536, 0, 196612, 655
 position = Vector2(1, 0)
 
 [node name="Player" parent="." unique_id=1185415252 instance=ExtResource("1_2m11t")]
+
+[node name="flowers" type="Node2D" parent="." unique_id=118697118]
+
+[node name="flower4" parent="flowers" unique_id=2111132372 instance=ExtResource("3_66dbu")]
+position = Vector2(407, -12)
+
+[node name="flower3" parent="flowers" unique_id=1422475997 instance=ExtResource("3_66dbu")]
+position = Vector2(321, -14)
+
+[node name="flower2" parent="flowers" unique_id=1350766396 instance=ExtResource("3_66dbu")]
+position = Vector2(229, -15)
+
+[node name="flower" parent="flowers" unique_id=1765435353 instance=ExtResource("3_66dbu")]
+position = Vector2(143, -14)

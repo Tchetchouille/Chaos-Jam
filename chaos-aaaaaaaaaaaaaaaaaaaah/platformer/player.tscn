@@ -39,6 +39,7 @@ height = 72.0
 [node name="Player" type="Node2D" unique_id=1185415252]
 
 [node name="croco" type="CharacterBody2D" parent="." unique_id=2069976401]
+collision_layer = 2
 script = ExtResource("1_o0ery")
 
 [node name="Timer" type="Timer" parent="croco" unique_id=1788881504]

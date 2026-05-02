@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://c2d5phnpa07we"]
+
+[ext_resource type="Texture2D" uid="uid://55i34lmnfifh" path="res://assets/éléments autres/flower_animation.png" id="1_6wdd0"]
+[ext_resource type="Script" uid="uid://b0oiw0dksl47r" path="res://platformer/scripts/flower.gd" id="1_x247y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x247y"]
+atlas = ExtResource("1_6wdd0")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oeer0"]
+atlas = ExtResource("1_6wdd0")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfvgl"]
+atlas = ExtResource("1_6wdd0")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ark31"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x247y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oeer0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sfvgl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yjojv"]
+radius = 18.027756
+
+[node name="flower" type="Area2D" unique_id=1765435353]
+collision_mask = 2
+script = ExtResource("1_x247y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=491161910]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ark31")
+autoplay = "default"
+frame_progress = 0.9192491
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1716225835]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_yjojv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
