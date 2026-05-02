@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drubb1q1nnyqn"
-path="res://.godot/imported/hearts.png-4bd21364cb74c21d21838814f2c17e90.ctex"
+uid="uid://g6ji0c0gruw3"
+path="res://.godot/imported/eye_idle.png-235c4399faf9e9390f34a120f7a76969.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/personnage/hearts.png"
-dest_files=["res://.godot/imported/hearts.png-4bd21364cb74c21d21838814f2c17e90.ctex"]
+source_file="res://assets/éléments autres/eye_idle.png"
+dest_files=["res://.godot/imported/eye_idle.png-235c4399faf9e9390f34a120f7a76969.ctex"]
 
 [params]
 

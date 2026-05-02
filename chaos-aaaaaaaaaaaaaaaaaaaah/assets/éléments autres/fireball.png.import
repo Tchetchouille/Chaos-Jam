@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g6ji0c0gruw3"
-path="res://.godot/imported/eye_idle.png-c3e608262e996ea5da7b6e4783789c9f.ctex"
+uid="uid://drr3mj7xvcy80"
+path="res://.godot/imported/fireball.png-7681b07022d93b4b1b15192a93499f94.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/personnage/eye_idle.png"
-dest_files=["res://.godot/imported/eye_idle.png-c3e608262e996ea5da7b6e4783789c9f.ctex"]
+source_file="res://assets/éléments autres/fireball.png"
+dest_files=["res://.godot/imported/fireball.png-7681b07022d93b4b1b15192a93499f94.ctex"]
 
 [params]
 
