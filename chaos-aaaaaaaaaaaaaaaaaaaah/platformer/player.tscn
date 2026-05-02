@@ -32,8 +32,9 @@ animations = [{
 "speed": 3.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1kye7"]
-size = Vector2(55, 40)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dsss6"]
+radius = 14.5
+height = 72.0
 
 [node name="Player" type="Node2D" unique_id=1185415252]
 
@@ -47,11 +48,12 @@ wait_time = 0.4
 texture_filter = 1
 position = Vector2(-3, -19)
 sprite_frames = SubResource("SpriteFrames_mqt2r")
+autoplay = "default"
 frame_progress = 0.0053694863
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="croco" unique_id=25085843]
-position = Vector2(-2.5, 7)
-shape = SubResource("RectangleShape2D_1kye7")
+position = Vector2(2, -11)
+shape = SubResource("CapsuleShape2D_dsss6")
 
 [node name="Camera2D" type="Camera2D" parent="croco" unique_id=950670894]
 zoom = Vector2(2, 2)
