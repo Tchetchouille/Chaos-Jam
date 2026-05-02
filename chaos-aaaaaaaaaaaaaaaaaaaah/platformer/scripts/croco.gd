@@ -31,7 +31,10 @@ func _physics_process(delta: float) -> void:
 func die():
 	print("You died")
 	Engine.time_scale = 0.7
-	$Timer.start()
+	if $Timer.is_stopped():
+		$Timer.start()
+func is_player ():
+	return true
 
 func _on_timer_timeout() -> void:
 	Engine.time_scale = 1.0

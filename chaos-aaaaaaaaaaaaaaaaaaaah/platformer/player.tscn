@@ -42,21 +42,21 @@ height = 72.0
 collision_layer = 2
 script = ExtResource("1_o0ery")
 
-[node name="Timer" type="Timer" parent="croco" unique_id=1788881504]
+[node name="Timer" type="Timer" parent="." unique_id=1788881504]
 wait_time = 0.4
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="croco" unique_id=1913893043]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1913893043]
 texture_filter = 1
 position = Vector2(-3, -19)
 sprite_frames = SubResource("SpriteFrames_mqt2r")
 autoplay = "default"
 frame_progress = 0.0053694863
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="croco" unique_id=25085843]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=25085843]
 position = Vector2(2, -11)
 shape = SubResource("CapsuleShape2D_dsss6")
 
-[node name="Camera2D" type="Camera2D" parent="croco" unique_id=950670894]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=950670894]
 zoom = Vector2(2, 2)
 
-[connection signal="timeout" from="croco/Timer" to="croco" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
