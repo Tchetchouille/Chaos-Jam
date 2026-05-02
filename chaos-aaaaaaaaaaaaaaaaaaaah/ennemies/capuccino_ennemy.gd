@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var roaming_speed = 50
-@export var pursuing_speed = 120
+@export var pursuing_speed = 150
 @onready var LeftRay = $"Node2D/LeftRay"
 @onready var RightRay = $"Node2D/RightRay"
 @onready var target = $"../Player"
