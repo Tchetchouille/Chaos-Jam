@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cbl6yynqv86ec" path="res://assets/fond/jour_prairie/fond_jour_1.png" id="1_wq1rd"]
 [ext_resource type="Script" uid="uid://o4ayyta7lub0" path="res://Some Scenes (not edible)/Some scripts that are not scenes/bg.gd" id="2_8khev"]
 [ext_resource type="Theme" uid="uid://diqgmb3vgg5cu" path="res://Themes/something_something_title_theme.tres" id="3_48vh7"]
-[ext_resource type="PackedScene" path="res://game_manager.tscn" id="4_mhgmo"]
+[ext_resource type="PackedScene" uid="uid://djfagdh8yfj65" path="res://game_manager.tscn" id="4_mhgmo"]
 [ext_resource type="PackedScene" uid="uid://dg28uthqtdmhb" path="res://capuccino.tscn" id="5_wq1rd"]
 
 [node name="EnterChaos" type="Control" unique_id=673464465]
@@ -15,6 +15,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Bg" type="TextureRect" parent="." unique_id=1007625039]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
