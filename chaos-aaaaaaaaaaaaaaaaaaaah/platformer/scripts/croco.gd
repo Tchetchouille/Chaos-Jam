@@ -13,6 +13,10 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		
+	# Handle down on platform
+	if Input.is_action_pressed("move_down"):
+		velocity.y += 1
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -27,14 +31,12 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
 
 func die():
 	print("You died")
 	Engine.time_scale = 0.7
-	if $Timer.is_stopped():
-		$Timer.start()
-func is_player ():
-	return true
+	$Timer.start()
 
 func _on_timer_timeout() -> void:
 	Engine.time_scale = 1.0
