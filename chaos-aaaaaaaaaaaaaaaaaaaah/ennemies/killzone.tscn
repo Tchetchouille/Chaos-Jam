@@ -8,3 +8,5 @@ script = ExtResource("1_md6ks")
 
 [node name="Timer" type="Timer" parent="." unique_id=1140319677]
 wait_time = 0.4
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

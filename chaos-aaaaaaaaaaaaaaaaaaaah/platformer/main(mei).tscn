@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://cfe76bbmb1u8g"]
 
 [ext_resource type="PackedScene" uid="uid://q202rr2v34pt" path="res://platformer/player.tscn" id="1_2m11t"]
-[ext_resource type="Script" uid="uid://byanmuwpo5u8f" path="res://platformer/scripts/game_manager.gd" id="1_g2jl4"]
+[ext_resource type="Script" path="res://platformer/scripts/game_manager.gd" id="1_g2jl4"]
 [ext_resource type="Texture2D" uid="uid://bthdoug2dhfdm" path="res://assets/tileset/tileset_vert.png" id="2_wcmg0"]
 [ext_resource type="PackedScene" uid="uid://c2d5phnpa07we" path="res://platformer/flower.tscn" id="3_66dbu"]
 [ext_resource type="Texture2D" uid="uid://wiecrs6afgox" path="res://assets/tileset/tileset_brun.png" id="3_mhnhw"]
 [ext_resource type="Texture2D" uid="uid://dtro1pb2kc03c" path="res://assets/tileset/tileset_brun2.png" id="4_c5qwv"]
 [ext_resource type="PackedScene" uid="uid://7ksnaclv1ne6" path="res://ennemies/capuccino_ennemy.tscn" id="5_g2jl4"]
+[ext_resource type="PackedScene" uid="uid://bsjdbl074w77b" path="res://ennemies/killzone.tscn" id="8_4koh0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kjevp"]
 texture = ExtResource("2_wcmg0")
@@ -2020,6 +2021,9 @@ sources/0 = SubResource("TileSetAtlasSource_kjevp")
 sources/1 = SubResource("TileSetAtlasSource_c5qwv")
 sources/2 = SubResource("TileSetAtlasSource_4koh0")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ilqmx"]
+distance = -946.0
+
 [node name="game" type="Node2D" unique_id=688200943]
 
 [node name="game_manager" type="Node2D" parent="." unique_id=339136379]
@@ -2058,3 +2062,10 @@ position = Vector2(143, -14)
 
 [node name="Capuccino" parent="." unique_id=1427683859 instance=ExtResource("5_g2jl4")]
 position = Vector2(371, -15)
+
+[node name="Killzone" parent="." unique_id=822059160 instance=ExtResource("8_4koh0")]
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1094132405]
+position = Vector2(-16, 357)
+shape = SubResource("WorldBoundaryShape2D_ilqmx")
