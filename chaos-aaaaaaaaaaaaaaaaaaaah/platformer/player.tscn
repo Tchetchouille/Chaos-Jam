@@ -36,9 +36,7 @@ animations = [{
 radius = 14.5
 height = 72.0
 
-[node name="Player" type="Node2D" unique_id=1185415252]
-
-[node name="croco" type="CharacterBody2D" parent="." unique_id=2069976401]
+[node name="Player" type="CharacterBody2D" unique_id=835411554]
 collision_layer = 2
 script = ExtResource("1_o0ery")
 
