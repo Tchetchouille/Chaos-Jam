@@ -23,3 +23,12 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+func die():
+	print("You died")
+	Engine.time_scale = 0.7
+	$Timer.start()
+
+func _on_timer_timeout() -> void:
+	Engine.time_scale = 1.0
+	get_tree().reload_current_scene() # Replace with function body.

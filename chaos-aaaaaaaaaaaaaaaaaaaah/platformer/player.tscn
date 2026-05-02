@@ -40,6 +40,9 @@ size = Vector2(55, 40)
 [node name="croco" type="CharacterBody2D" parent="." unique_id=2069976401]
 script = ExtResource("1_o0ery")
 
+[node name="Timer" type="Timer" parent="croco" unique_id=1788881504]
+wait_time = 0.4
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="croco" unique_id=1913893043]
 texture_filter = 1
 position = Vector2(-3, -19)
@@ -52,3 +55,5 @@ shape = SubResource("RectangleShape2D_1kye7")
 
 [node name="Camera2D" type="Camera2D" parent="croco" unique_id=950670894]
 zoom = Vector2(2, 2)
+
+[connection signal="timeout" from="croco/Timer" to="croco" method="_on_timer_timeout"]
