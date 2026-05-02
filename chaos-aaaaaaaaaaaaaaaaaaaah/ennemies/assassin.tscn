@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://dqu6vlihttwi4"]
+
+[ext_resource type="PackedScene" uid="uid://bsjdbl074w77b" path="res://ennemies/killzone.tscn" id="1_6xbjy"]
+[ext_resource type="Script" uid="uid://dsx58mmocxtjj" path="res://ennemies/assassin.gd" id="1_aitq5"]
+[ext_resource type="Texture2D" uid="uid://8adeolpnsbyn" path="res://assets/personnage/human_spritesheet.png" id="2_aitq5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xbjy"]
+size = Vector2(21, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nsx7y"]
+atlas = ExtResource("2_aitq5")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffea4"]
+atlas = ExtResource("2_aitq5")
+region = Rect2(100, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c00rd"]
+atlas = ExtResource("2_aitq5")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rj0ov"]
+atlas = ExtResource("2_aitq5")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kd6ri"]
+atlas = ExtResource("2_aitq5")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jntgu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nsx7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffea4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nsx7y")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c00rd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rj0ov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kd6ri")
+}],
+"loop": true,
+"name": &"sprint",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aitq5"]
+height = 76.0
+
+[node name="Assassin" type="CharacterBody2D" unique_id=1491313463]
+script = ExtResource("1_aitq5")
+
+[node name="Killzone" parent="." unique_id=822059160 instance=ExtResource("1_6xbjy")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=417796794]
+position = Vector2(0.5, 14)
+shape = SubResource("RectangleShape2D_6xbjy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=734151330]
+sprite_frames = SubResource("SpriteFrames_jntgu")
+autoplay = "default"
+
+[node name="Label" type="Label" parent="." unique_id=118254705]
+visible = false
+offset_left = -95.0
+offset_top = -98.0
+offset_right = 95.0
+offset_bottom = -40.0
+theme_override_font_sizes/font_size = 7
+text = "Tiens, prends ça ! Je vais te saigner !"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=476556127]
+position = Vector2(0, 6)
+shape = SubResource("CapsuleShape2D_aitq5")
