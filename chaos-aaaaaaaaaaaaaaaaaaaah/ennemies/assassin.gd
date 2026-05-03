@@ -26,15 +26,20 @@ func _process(delta: float) -> void:
 		print("pursuing")
 		var direction = 1 if position.x < target.position.x else -1
 		$AnimatedSprite2D.flip_h = true if direction<0 else false
+		$Killzone/CollisionShape2D2.scale.x = -1 if direction<0 else 1
 		velocity.x = pursuing_speed * direction
 		#if not $AnimatedSprite2D.is_playing("sprint"):
 		$AnimatedSprite2D.play("sprint")
 		$Label.visible = false
+		
 	
 	if abs(position.x - target.position.x)<70 and abs(position.y - target.position.y)<100:
 		velocity.x = 0
 		$AnimatedSprite2D.play("attack")
 		$Label.visible = true
+		$Killzone.can_kill=true
+		if $Timer.is_stopped():
+			$Timer.start()
 	
 
 func _physics_process(delta: float) -> void:
@@ -43,3 +48,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 func die():
 	queue_free()
+
+
+func _on_timer_timeout() -> void:
+	$Killzone.can_kill=false

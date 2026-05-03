@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://dsx58mmocxtjj" path="res://ennemies/assassin.gd" id="1_aitq5"]
 [ext_resource type="Texture2D" uid="uid://8adeolpnsbyn" path="res://assets/personnage/human_spritesheet.png" id="2_aitq5"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xbjy"]
-size = Vector2(21, 48)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aitq5"]
+size = Vector2(37, 14)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nsx7y"]
 atlas = ExtResource("2_aitq5")
@@ -70,12 +70,14 @@ height = 76.0
 script = ExtResource("1_aitq5")
 
 [node name="Killzone" parent="." unique_id=822059160 instance=ExtResource("1_6xbjy")]
+can_kill = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=417796794]
-position = Vector2(0.5, 14)
-shape = SubResource("RectangleShape2D_6xbjy")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Killzone" unique_id=932463723]
+position = Vector2(22.5, 9)
+shape = SubResource("RectangleShape2D_aitq5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=734151330]
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_jntgu")
 autoplay = "default"
 
@@ -94,3 +96,8 @@ autowrap_mode = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=476556127]
 position = Vector2(0, 6)
 shape = SubResource("CapsuleShape2D_aitq5")
+
+[node name="Timer" type="Timer" parent="." unique_id=1866385239]
+wait_time = 0.4
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
