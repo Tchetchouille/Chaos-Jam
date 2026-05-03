@@ -6,3 +6,4 @@
 stream = ExtResource("1_25ddj")
 volume_db = 2.0
 autoplay = true
+parameters/looping = true

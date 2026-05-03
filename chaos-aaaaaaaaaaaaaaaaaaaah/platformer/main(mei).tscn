@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://cfe76bbmb1u8g"]
 
-[ext_resource type="Script" uid="uid://byanmuwpo5u8f" path="res://platformer/scripts/game_manager.gd" id="1_ilqmx"]
+[ext_resource type="Script" path="res://platformer/scripts/game_manager.gd" id="1_ilqmx"]
 [ext_resource type="Texture2D" uid="uid://bthdoug2dhfdm" path="res://assets/tileset/tileset_vert.png" id="2_ife05"]
 [ext_resource type="Texture2D" uid="uid://wiecrs6afgox" path="res://assets/tileset/tileset_brun.png" id="3_8xtrh"]
 [ext_resource type="Texture2D" uid="uid://dtro1pb2kc03c" path="res://assets/tileset/tileset_brun2.png" id="4_h81ds"]
@@ -2877,7 +2877,6 @@ collision_mask = 6
 position = Vector2(1, 0)
 
 [node name="Player" parent="." unique_id=1185415252 instance=ExtResource("7_jcepq")]
-collision_layer = 1
 collision_mask = 7
 
 [node name="flowers" type="Node2D" parent="." unique_id=118697118]
