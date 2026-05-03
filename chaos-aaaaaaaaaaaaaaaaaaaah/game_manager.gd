@@ -32,7 +32,7 @@ func generate_text():
 					var rand_word_index = randi_range(0, len(brainrot)-1)
 					var rand_pos = randi_range(0, text_length-1)
 					var appendix = "a" if rand_word_index-text_length%2==0 else "o"
-					text_arr[rand_pos] = _generator.generate_noun(_max_length, _temperature, _top_k) #brainrot[rand_word_index] + appendix
+					text_arr[rand_pos] = brainrot[rand_word_index] + appendix #_generator.generate_noun(_max_length, _temperature, _top_k)
 				var text_random = ""
 				for i in text_arr:
 					text_random += i + " "
