@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://d2l5xntobkshn"]
+
+[ext_resource type="Script" uid="uid://btltfunm2h16o" path="res://Shopifina/shop_building.gd" id="1_wncre"]
+
+[node name="Building" type="Panel" unique_id=222285974]
+custom_minimum_size = Vector2(0, 80)
+offset_right = 449.0
+offset_bottom = 80.0
+script = ExtResource("1_wncre")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1519765430]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Name" type="RichTextLabel" parent="HBoxContainer" unique_id=1176519881]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+text = "Placeholder"
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InfoBox" type="VBoxContainer" parent="HBoxContainer" unique_id=200000001]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Count" type="Label" parent="HBoxContainer/InfoBox" unique_id=1293111105]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 1
+
+[node name="Price" type="Label" parent="HBoxContainer/InfoBox" unique_id=1888123456]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.8162925, 0.72782916, 0.4227817, 1)
+text = "Coût: 0"
+horizontal_alignment = 1

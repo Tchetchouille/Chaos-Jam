@@ -4,8 +4,15 @@ extends CharacterBody2D
 const SPEED = 150.0
 const JUMP_VELOCITY = -300.0
 
+@export var fall_death_limit = 2000.0
+
 
 func _physics_process(delta: float) -> void:
+
+	if position.y > fall_death_limit:
+		die()
+		return
+
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -15,7 +22,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 		
 	# Handle down on platform
-	if Input.is_action_pressed("move_down"):
+	if Input.is_action_pressed("ui_down"):
 		velocity.y += 1
 
 	# Get the input direction and handle the movement/deceleration.
@@ -34,10 +41,12 @@ func _physics_process(delta: float) -> void:
 	
 
 func die():
-	print("You died")
-	Engine.time_scale = 0.7
-	$Timer.start()
+	if $Timer.is_stopped():
+		print("You died")
+		Engine.time_scale = 0.7
+		$Timer.start()
 
 func _on_timer_timeout() -> void:
 	Engine.time_scale = 1.0
-	get_tree().reload_current_scene() # Replace with function body.
+	print("You died for real this time")
+	get_tree().change_scene_to_file("res://Shopifina/shop.tscn")

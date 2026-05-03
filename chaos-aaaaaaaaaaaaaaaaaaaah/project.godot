@@ -19,6 +19,8 @@ config/icon="res://icon.svg"
 
 GameManager="*uid://dtkr2ptk6gavc"
 GlobalMusic="*uid://c7sf76f0xaiwo"
+BrainrotGenerator="*res://rotmaxxer/brainrot_generator.gd"
+ShopState="*res://Shopifina/shop_state.gd"
 
 [display]
 

@@ -4,8 +4,8 @@ extends Area2D
 
 
 
-func _on_body_entered(body: Node2D) -> void:
-	print("+1 flower")
+func _on_body_entered(_body: Node2D) -> void:
+	ShopState.collect_flower()
 	queue_free()
 	
 	game_manager.add_point()
