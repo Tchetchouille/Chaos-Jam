@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 		velocity.x = pursuing_speed * direction
 		$AnimatedSprite2D.play("pursue")
 	elif alive :
-		print("Nope")
+		#print("Nope")
 		velocity.x = 0
 	
 	if abs(position.x - target.position.x)<100 and $Timer.is_stopped() and alive and abs(position.y - target.position.y)<100 :

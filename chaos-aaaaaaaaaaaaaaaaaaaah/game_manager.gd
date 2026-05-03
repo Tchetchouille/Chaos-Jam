@@ -12,7 +12,7 @@ func _on_scene_changed():
 func generate_text():
 	if get_tree():
 		for node in get_all_children(get_tree().current_scene):
-			if node is Label or node is RichTextLabel:
+			if (node is Label or node is RichTextLabel) and not node.is_in_group("no_brainrot"):
 				var text_arr = node.text.split(" ")
 				var text_length = len(text_arr)
 				for i in range(round(text_length/3)):

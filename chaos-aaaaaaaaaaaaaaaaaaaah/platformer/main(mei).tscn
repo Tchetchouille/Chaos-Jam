@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://cfe76bbmb1u8g"]
 
-[ext_resource type="Script" uid="uid://byanmuwpo5u8f" path="res://platformer/scripts/game_manager.gd" id="1_ilqmx"]
+[ext_resource type="Script" path="res://platformer/scripts/game_manager.gd" id="1_ilqmx"]
 [ext_resource type="Texture2D" uid="uid://bthdoug2dhfdm" path="res://assets/tileset/tileset_vert.png" id="2_ife05"]
 [ext_resource type="Texture2D" uid="uid://wiecrs6afgox" path="res://assets/tileset/tileset_brun.png" id="3_8xtrh"]
 [ext_resource type="Texture2D" uid="uid://dtro1pb2kc03c" path="res://assets/tileset/tileset_brun2.png" id="4_h81ds"]
@@ -9,12 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://c2h4aerrjxq43" path="res://assets/éléments autres/platform_through.png" id="6_x6y6t"]
 [ext_resource type="PackedScene" uid="uid://q202rr2v34pt" path="res://platformer/player.tscn" id="7_jcepq"]
 [ext_resource type="Texture2D" uid="uid://cr32mop1xr5wt" path="res://assets/tileset/tileset_foncé.png" id="7_m5x68"]
-[ext_resource type="PackedScene" uid="uid://c2d5phnpa07we" path="res://platformer/flower.tscn" id="8_m5x68"]
+[ext_resource type="PackedScene" path="res://platformer/flower.tscn" id="8_m5x68"]
 [ext_resource type="PackedScene" uid="uid://7ksnaclv1ne6" path="res://ennemies/capuccino_ennemy.tscn" id="9_4l00c"]
 [ext_resource type="Texture2D" uid="uid://o2mnn6rcbq84" path="res://assets/tileset/platform_through2.png" id="9_g57wg"]
 [ext_resource type="Texture2D" uid="uid://nv4a62qq232h" path="res://assets/éléments autres/cloud1.png" id="11_h81ds"]
 [ext_resource type="Texture2D" uid="uid://v6ihgnr5njat" path="res://assets/éléments autres/cloud2.png" id="12_fkwi2"]
 [ext_resource type="Texture2D" uid="uid://bqklacdeq8egw" path="res://assets/éléments autres/cloud3.png" id="13_fkwi2"]
+[ext_resource type="Script" uid="uid://8jpj6bs0rklr" path="res://platformer/currency_display.gd" id="16_m5x68"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kjevp"]
 texture = ExtResource("2_ife05")
@@ -4488,3 +4489,11 @@ position = Vector2(-3469, 1211)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mur invisible 2" unique_id=1427132742]
 shape = SubResource("WorldBoundaryShape2D_jcepq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2101214258]
+
+[node name="CurrencyDisplay" type="RichTextLabel" parent="CanvasLayer" unique_id=1503293043 groups=["no_brainrot"]]
+offset_right = 140.0
+offset_bottom = 63.0
+text = "Fleurs : 0"
+script = ExtResource("16_m5x68")
