@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://cfe76bbmb1u8g"]
 
-[ext_resource type="Script" uid="uid://byanmuwpo5u8f" path="res://platformer/scripts/game_manager.gd" id="1_ilqmx"]
+[ext_resource type="Script" path="res://platformer/scripts/game_manager.gd" id="1_ilqmx"]
 [ext_resource type="Texture2D" uid="uid://bthdoug2dhfdm" path="res://assets/tileset/tileset_vert.png" id="2_ife05"]
 [ext_resource type="Texture2D" uid="uid://wiecrs6afgox" path="res://assets/tileset/tileset_brun.png" id="3_8xtrh"]
 [ext_resource type="Texture2D" uid="uid://dtro1pb2kc03c" path="res://assets/tileset/tileset_brun2.png" id="4_h81ds"]
@@ -15,10 +15,11 @@
 [ext_resource type="Texture2D" uid="uid://nv4a62qq232h" path="res://assets/éléments autres/cloud1.png" id="11_h81ds"]
 [ext_resource type="Texture2D" uid="uid://v6ihgnr5njat" path="res://assets/éléments autres/cloud2.png" id="12_fkwi2"]
 [ext_resource type="Texture2D" uid="uid://bqklacdeq8egw" path="res://assets/éléments autres/cloud3.png" id="13_fkwi2"]
-[ext_resource type="Script" path="res://platformer/currency_display.gd" id="16_m5x68"]
+[ext_resource type="Script" uid="uid://8jpj6bs0rklr" path="res://platformer/currency_display.gd" id="16_m5x68"]
 [ext_resource type="Texture2D" uid="uid://bp5kv6vkwage" path="res://assets/éléments autres/fish_2.png" id="16_ttkid"]
 [ext_resource type="Texture2D" uid="uid://cax77acvx1wet" path="res://assets/éléments autres/fish_1.png" id="17_23pxe"]
 [ext_resource type="Texture2D" uid="uid://b57hodlknk4nt" path="res://assets/éléments autres/fish_3.png" id="18_cya7w"]
+[ext_resource type="PackedScene" uid="uid://dqu6vlihttwi4" path="res://ennemies/assassin.tscn" id="20_cya7w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kjevp"]
 texture = ExtResource("2_ife05")
@@ -4828,9 +4829,6 @@ position = Vector2(5582, 605)
 [node name="flower170" parent="flowers" unique_id=460495699 instance=ExtResource("8_m5x68")]
 position = Vector2(5475, 1555)
 
-[node name="Capuccino" parent="." unique_id=1427683859 instance=ExtResource("9_4l00c")]
-position = Vector2(370, -15)
-
 [node name="backgroud2" type="Node" parent="." unique_id=1025568914]
 
 [node name="backgroud" type="TileMap" parent="backgroud2" unique_id=1320018840]
@@ -5036,3 +5034,30 @@ offset_right = 140.0
 offset_bottom = 63.0
 text = "Fleurs : 0"
 script = ExtResource("16_m5x68")
+
+[node name="Ennemies" type="Node2D" parent="." unique_id=2089517198]
+position = Vector2(247, -14)
+
+[node name="Assassin" parent="Ennemies" unique_id=1491313463 instance=ExtResource("20_cya7w")]
+position = Vector2(-1540, 1084)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Assassin2" parent="Ennemies" unique_id=1308091053 instance=ExtResource("20_cya7w")]
+position = Vector2(-2780, 1170)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Capuccino" parent="Ennemies" unique_id=1427683859 instance=ExtResource("9_4l00c")]
+
+[node name="Capuccino2" parent="Ennemies" unique_id=102510504 instance=ExtResource("9_4l00c")]
+position = Vector2(606, 520)
+
+[node name="Capuccino3" parent="Ennemies" unique_id=1712562308 instance=ExtResource("9_4l00c")]
+position = Vector2(-528, 509)
+
+[node name="Capuccino4" parent="Ennemies" unique_id=913310593 instance=ExtResource("9_4l00c")]
+position = Vector2(5439, 1983)
+
+[node name="Capuccino5" parent="Ennemies" unique_id=498645594 instance=ExtResource("9_4l00c")]
+position = Vector2(2860, 293)

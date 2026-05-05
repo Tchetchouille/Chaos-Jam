@@ -103,11 +103,13 @@ height = 39.0
 
 [node name="Capuccino" type="CharacterBody2D" unique_id=1427683859]
 collision_layer = 4
+collision_mask = 5
 script = ExtResource("1_afp6r")
 
 [node name="Killzone" parent="." unique_id=187212802 instance=ExtResource("2_xchan")]
 position = Vector2(1, 6.5)
 collision_layer = 4
+collision_mask = 255
 can_kill = false
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Killzone" unique_id=2133864519]

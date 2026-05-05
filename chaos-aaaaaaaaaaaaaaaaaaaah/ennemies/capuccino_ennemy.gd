@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var pursuing_speed = 150
 @onready var LeftRay = $"Node2D/LeftRay"
 @onready var RightRay = $"Node2D/RightRay"
-@onready var target = $"../Player"
+@onready var target = $"../../Player"
 var alive = true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

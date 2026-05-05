@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dg28uthqtdmhb"]
 
-[ext_resource type="Script" path="res://capuccino.gd" id="1_g40yt"]
+[ext_resource type="Script" uid="uid://b3wodr8hasdhk" path="res://capuccino.gd" id="1_g40yt"]
 [ext_resource type="Texture2D" uid="uid://l5p4g7sxug2o" path="res://Cappucino_assassin.png" id="1_o0viv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g40yt"]
@@ -95,6 +95,7 @@ autoplay = "explode"
 frame_progress = 0.713899
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2056966220]
+collision_mask = 255
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2133864519]
 position = Vector2(1, 6.5)

@@ -64,12 +64,13 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aitq5"]
-height = 76.0
+height = 35.0
 
 [node name="Assassin" type="CharacterBody2D" unique_id=1491313463]
 script = ExtResource("1_aitq5")
 
 [node name="Killzone" parent="." unique_id=822059160 instance=ExtResource("1_6xbjy")]
+collision_layer = 5
 can_kill = false
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Killzone" unique_id=932463723]
@@ -94,7 +95,7 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=476556127]
-position = Vector2(0, 6)
+position = Vector2(0, 26)
 shape = SubResource("CapsuleShape2D_aitq5")
 
 [node name="Timer" type="Timer" parent="." unique_id=1866385239]
