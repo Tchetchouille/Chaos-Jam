@@ -49,4 +49,4 @@ func die():
 func _on_timer_timeout() -> void:
 	Engine.time_scale = 1.0
 	print("You died for real this time")
-	get_tree().change_scene_to_file("res://Shopifina/shop.tscn")
+	get_tree().change_scene_to_file("res://Shopifina/Shop.tscn")
